@@ -1,14 +1,14 @@
-package com.tencent.xyzshop.impl;
+package com.tencent.xyzshop;
 
-import com.tencent.xyzshop.OrderService;
 import com.tencent.xyzshop.model.Goods;
+
+import javax.ws.rs.Path;
+
 //
 //import javax.ws.rs.GET;
-//import javax.ws.rs.Path;
 //import javax.ws.rs.Produces;
 
-
-//@Path("/order")
+@Path("/order")
 public class OrderServiceImpl implements OrderService {
     @Override
     public Goods save(Goods goods) {
@@ -23,14 +23,11 @@ public class OrderServiceImpl implements OrderService {
         goods.setId(goodsId);
         goods.setPrice(12111);
         goods.setStock(20);
-        goods.setTitle("Tencent TV M100");
+        goods.setTitle("腾讯黑鲨手机 M100");
         return goods;
     }
 
     @Override
-//    @GET
-//    @Path("/hello")
-//    @Produces("text/plain")
     public String sayHello() {
         return "世界，你好。 Hello world";
     }
